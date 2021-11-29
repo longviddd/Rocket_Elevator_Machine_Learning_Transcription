@@ -159,19 +159,21 @@ ActiveRecord::Schema.define(version: 2021_11_22_173613) do
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
-  create_table "fact_interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.bigint "employee_id" , null: false
-    t.bigint "building_id" , null: false
-    t.bigint "battery_id" 
+  create_table "fact_interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "building_id"
+    t.bigint "battery_id"
     t.bigint "column_id"
     t.bigint "elevator_id"
-    t.datetime "start_intervention" , null: false
-    t.datetime "end_intervention"
+    t.date "start_intervention"
+    t.date "end_intervention"
     t.string "result"
     t.string "report"
     t.string "status"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["building_id"], name: "index_fact_interventions_on_building_id"
+    t.index ["employee_id"], name: "index_fact_interventions_on_employee_id"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=latin1", force: :cascade do |t|
@@ -237,4 +239,6 @@ ActiveRecord::Schema.define(version: 2021_11_22_173613) do
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "columns"
   add_foreign_key "employees", "users"
+  add_foreign_key "fact_interventions", "buildings"
+  add_foreign_key "fact_interventions", "employees"
 end
