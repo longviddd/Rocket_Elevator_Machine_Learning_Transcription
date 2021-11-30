@@ -159,9 +159,9 @@ ActiveRecord::Schema.define(version: 2021_11_29_195824) do
     t.index ["user_id"], name: "index_employees_on_user_id"
   end
 
-  create_table "fact_interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.bigint "employee_id"
+  create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.bigint "building_id"
+    t.bigint "author"
     t.bigint "battery_id"
     t.bigint "column_id"
     t.bigint "elevator_id"
@@ -173,12 +173,12 @@ ActiveRecord::Schema.define(version: 2021_11_29_195824) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.bigint "customer_id"
+    t.index ["author"], name: "fk_rails_372877a32f"
     t.index ["battery_id"], name: "fk_fact_intervention_battery"
-    t.index ["building_id"], name: "index_fact_interventions_on_building_id"
+    t.index ["building_id"], name: "index_interventions_on_building_id"
     t.index ["column_id"], name: "fk_fact_intervention_column"
     t.index ["customer_id"], name: "fk_fact_intervention_customer"
     t.index ["elevator_id"], name: "fk_fact_intervention_elevator"
-    t.index ["employee_id"], name: "index_fact_interventions_on_employee_id"
   end
 
   create_table "leads", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
@@ -244,10 +244,10 @@ ActiveRecord::Schema.define(version: 2021_11_29_195824) do
   add_foreign_key "customers", "users"
   add_foreign_key "elevators", "columns"
   add_foreign_key "employees", "users"
-  add_foreign_key "fact_interventions", "batteries", name: "fk_fact_intervention_battery"
-  add_foreign_key "fact_interventions", "buildings"
-  add_foreign_key "fact_interventions", "columns", name: "fk_fact_intervention_column"
-  add_foreign_key "fact_interventions", "customers", name: "fk_fact_intervention_customer"
-  add_foreign_key "fact_interventions", "elevators", name: "fk_fact_intervention_elevator"
-  add_foreign_key "fact_interventions", "employees"
+  add_foreign_key "interventions", "batteries", name: "fk_fact_intervention_battery"
+  add_foreign_key "interventions", "buildings"
+  add_foreign_key "interventions", "columns", name: "fk_fact_intervention_column"
+  add_foreign_key "interventions", "customers", name: "fk_fact_intervention_customer"
+  add_foreign_key "interventions", "elevators", name: "fk_fact_intervention_elevator"
+  add_foreign_key "interventions", "employees", column: "author"
 end

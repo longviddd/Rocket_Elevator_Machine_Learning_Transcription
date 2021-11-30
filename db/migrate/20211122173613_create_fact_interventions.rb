@@ -1,8 +1,8 @@
 class CreateFactInterventions < ActiveRecord::Migration[5.2]
   def change
-    create_table :fact_interventions do |t|
-      t.references :employee, foreign_key: true
+    create_table :interventions do |t|
       t.references :building, foreign_key: true
+      t.bigint :author
       t.bigint :battery_id
       t.bigint :column_id
       t.bigint :elevator_id

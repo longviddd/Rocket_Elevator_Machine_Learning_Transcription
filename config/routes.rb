@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   patch '/users/:id/edit' => 'users#update'
   get '/greetings', to: 'watson#greetings'
   get '/maps/:building_id', to: 'map#load'
+  get '/intervention_form/:customer_id', to: 'factinterventionform#getCustomer'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

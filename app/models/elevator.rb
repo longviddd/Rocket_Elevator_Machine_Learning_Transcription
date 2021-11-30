@@ -3,7 +3,7 @@ require "slack-notifier"
 class Elevator < ApplicationRecord
   belongs_to :column
   before_update :slack_notifier_messsage
-  has_many :fact_intervention
+  has_many :intervention
 
   def slack_notifier_messsage
     if self.status_changed?
