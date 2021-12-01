@@ -16,7 +16,11 @@ Rails.application.routes.draw do
   patch '/users/:id/edit' => 'users#update'
   get '/greetings', to: 'watson#greetings'
   get '/maps/:building_id', to: 'map#load'
-  get '/intervention_form/:customer_id', to: 'factinterventionform#getCustomer'
+  get '/intervention_form/customer/:customer_id', to: 'intervention#getCustomer'
+  get '/intervention_form/building/:building_id' , to: 'intervention#getBuilding'
+  get '/intervention_form/battery/:battery_id', to: 'intervention#getBattery'
+  get '/intervention_form/column/:column_id', to: 'intervention#getColumn'
+  post '/intervention_form/submit' => 'intervention#submit'
   
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

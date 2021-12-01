@@ -188,40 +188,40 @@
         <div class="banner">
           <h1>Fact Intervention Form</h1>
         </div>
-        <div class="item">
-          <p>Customer ID: </p>
-          <select id="customer_selection">
-            <option value = "" onchange="customerDropdownChanged()">None</option>
+        <div class="item" id="customer_selection_div">
+          <p>Customer Name: </p>
+          <select id="customer_selection" onchange="customerDropdownChanged()">
+            <option value = "None">None</option>
           </select>
         </div>
-        <div class="item" hidden>
-          <p>Building ID: </p>
-          <select id = "building_selection">
-            <option value="" onchange="buildingDropdownChanged()">None</option>
+        <div class="item" id="building_selection_div" hidden>
+          <p>Building Administrator Name: </p>
+          <select id = "building_selection" onchange="buildingDropdownChanged()">
+            <option value="None" >None</option>
           </select>
         </div>
-        <div class="item" hidden>
+        <div class="item" id="battery_selection_div" hidden>
           <p>Battery ID: </p>
-          <select id = "battery_selection">
-            <option value="" onchange="batteryDropdownChanged()">None</option>
+          <select id = "battery_selection" onchange="batteryDropdownChanged()">
+            <option value="None" >None</option>
           </select>
         </div>
-        <div class="item" hidden>
+        <div class="item" id="column_selection_div" hidden>
           <p>Column ID: </p>
-          <select id = "column_selection">
-            <option value="" onchange="elevatorDropdownChanged()">None</option>
+          <select id = "column_selection" onchange="columnDropdownChanged()">
+            <option value="None" >None</option>
           </select>
         </div>
-        <div class="item" hidden>
+        <div class="item" id="elevator_selection_div" hidden>
           <p>Elevator ID: </p>
           <select id = "elevator_selection">
-            <option value="">None</option>
+            <option value="None">None</option>
           </select>
         </div>
         <div class="item">
           <p>Employee ID: </p>
           <select id = "employee_selection">
-            <option value="">None</option>
+            <option value="None">None</option>
           </select>
         </div>
         <div class="item">
@@ -235,21 +235,216 @@
     </div>
   </body>
   <script type="text/javascript"> 
-    allCustomers = []    
+    allCustomers = []
+    allEmployees = []
+    customer_dropdown = document.getElementById("customer_selection")
+    building_dropdown = document.getElementById("building_selection")
+    battery_dropdown = document.getElementById("battery_selection")
+    column_dropdown = document.getElementById("column_selection")
+    elevator_dropdown = document.getElementById("elevator_selection")
+    employee_dropdown = document.getElementById("employee_selection")
+    customer_dropdown_div = document.getElementById("customer_selection_div")
+    building_dropdown_div = document.getElementById("building_selection_div")
+    battery_dropdown_div = document.getElementById("battery_selection_div")
+    column_dropdown_div = document.getElementById("column_selection_div")
+    elevator_dropdown_div = document.getElementById("elevator_selection_div")
+    report_text = document.getElementById("report")
+
+    function removeOptions(selectElement) {
+      var i, L = selectElement.options.length - 1;
+      for(i = L; i > 0; i--) {
+          selectElement.remove(i);
+      }
+    }
     document.addEventListener('DOMContentLoaded', function() {
         <% Customer.all.each do |customer| %>
-            allCustomers.push(<%= raw(customer.id.to_json) %>)
+            allCustomers.push(<%= raw(customer.to_json) %>)
         <% end %>
         select = document.getElementById("customer_selection")
         for(var i = 0; i < allCustomers.length; i++){
-            console.log(allCustomers[i])
             var cus = allCustomers[i]
             var el = document.createElement("option");
-            el.text = cus
-            el.value = cus
+            el.text = cus.company_name
+            el.value = cus.id
             select.appendChild(el)
         }
+        <% Employee.all.each do |employee| %>
+          allEmployees.push(<%= raw(employee.to_json) %>)
+        <% end %>
+        select2 = document.getElementById("employee_selection")
+        for(var i = 0; i < allCustomers.length; i++){
+            var emp = allEmployees[i]
+            var el = document.createElement("option");
+            el.text = emp.first_name
+            el.value = emp.id
+            select2.appendChild(el)
+        }
     }, false);
+    function customerDropdownChanged(){
+      if(customer_dropdown.value != "None"){
+        building_dropdown_div.removeAttribute('hidden')
+        $.ajax({
+                type: "GET",
+                url: "/intervention_form/customer/" + customer_dropdown.value,
+                dataType: "json",
+                success: function(data){
+                    console.log(data)
+                    var jsonData = JSON.parse(JSON.stringify(data))
+                    for(var i = 0; i < jsonData.length; i++){
+                      var el = document.createElement("option")
+                      el.text = jsonData[i].name
+                      el.value = jsonData[i].id
+                      building_dropdown.appendChild(el)
+                    }
+                }  
+            });
+      }else{
+        building_dropdown_div.setAttribute("hidden", true)
+        battery_dropdown_div.setAttribute("hidden", true)
+        column_dropdown_div.setAttribute("hidden", true)
+        elevator_dropdown_div.setAttribute("hidden", true)
+        removeOptions(building_dropdown)
+        removeOptions(battery_dropdown)
+        removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
+      }
+        
+    }
+    function buildingDropdownChanged(){
+
+      if(building_dropdown.value != "None"){
+        battery_dropdown_div.removeAttribute('hidden')
+        $.ajax({
+                type: "GET",
+                url: "/intervention_form/building/" + building_dropdown.value,
+                dataType: "json",
+                success: function(data){
+                    console.log(data)
+                    var jsonData = JSON.parse(JSON.stringify(data))
+                    for(var i = 0; i < jsonData.length; i++){
+                      var el = document.createElement("option")
+                      el.text = jsonData[i].id
+                      el.value = jsonData[i].id
+                      battery_dropdown.appendChild(el)
+                    }
+                }  
+            });
+      } else if(building_dropdown.value == "None"){
+        battery_dropdown_div.setAttribute("hidden", true)
+        column_dropdown_div.setAttribute("hidden", true)
+        elevator_dropdown_div.setAttribute("hidden", true)
+        removeOptions(battery_dropdown)
+        removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
+        
+      }
+    }
+    function batteryDropdownChanged(){
+      if(battery_dropdown.value != "None"){
+        column_dropdown_div.removeAttribute('hidden')
+        $.ajax({
+                type: "GET",
+                url: "/intervention_form/battery/" + battery_dropdown.value,
+                dataType: "json",
+                success: function(data){
+                    console.log(data)
+                    var jsonData = JSON.parse(JSON.stringify(data))
+                    for(var i = 0; i < jsonData.length; i++){
+                      var el = document.createElement("option")
+                      el.text = jsonData[i].id
+                      el.value = jsonData[i].id
+                      column_dropdown.appendChild(el)
+                    }
+                }  
+            });
+      }else{
+        column_dropdown_div.setAttribute("hidden", true)
+        elevator_dropdown_div.setAttribute("hidden", true)
+        removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
+      }
+    }
+    function columnDropdownChanged(){
+      if(column_dropdown.value != "None"){
+        elevator_dropdown_div.removeAttribute('hidden')
+        $.ajax({
+                type: "GET",
+                url: "/intervention_form/column/" + column_dropdown.value,
+                dataType: "json",
+                success: function(data){
+                    console.log(data)
+                    var jsonData = JSON.parse(JSON.stringify(data))
+                    for(var i = 0; i < jsonData.length; i++){
+                      var el = document.createElement("option")
+                      el.text = jsonData[i].id
+                      el.value = jsonData[i].id
+                      elevator_dropdown.appendChild(el)
+                    }
+                }  
+            });
+      }else{
+        elevator_dropdown_div.setAttribute("hidden", true)
+        removeOptions(elevator_dropdown)
+      }
+      
+    }
+    function submitBtnClicked(){
+      if(customer_dropdown.value == "None" || building_dropdown.value == "None" || battery_dropdown.value == "None"){
+        alert('Fill all necessary fields!')
+        return
+      }
+      customer_value = customer_dropdown.value
+      building_value = building_dropdown.value
+      battery_value = null
+      column_value = null
+      elevator_value = null
+      employee_value = null
+      report = null
+      if(battery_dropdown.value == "None"){
+        battery_value = null
+
+      }else{
+        battery_value = battery_dropdown.value
+      }
+      if(column_dropdown.value == "None"){
+        column_value = null
+      }else{
+        column_value = column_dropdown.value
+      }
+      if(battery_dropdown.value == "None"){
+        battery_value = null
+      }else{
+        battery_value = battery_dropdown.value
+      }
+      if(employee_dropdown.value == "None"){
+        employee_value = null
+      }else{
+        employee_value = employee_dropdown.value
+      }
+      if(report_text.value == ""){
+        report = null
+      }else{
+        report = report_text.value
+      }
+      if(elevator_dropdown.value == "None"){
+        elevator_value = null
+      }else{
+        elevator_value = elevator_dropdown.value        
+      }
+      $.ajax({
+        type: "POST",// GET in place of POST
+        url: "/intervention_form/submit",
+        data : {employee_id: employee_value, customer_id: customer_value, building_id: building_value, battery_id: battery_value, column_id: column_value, elevator_id: elevator_value, report: report },
+        dataType: "json",
+        success: function (result) {
+            //do somthing here
+            window.alert("success!!");
+        },
+        error: function (){
+            window.alert("something wrong!");
+        }
+      });
+    }
     
 </script>
 </html>  

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_29_195824) do
+ActiveRecord::Schema.define(version: 2021_12_01_132436) do
 
   create_table "active_admin_comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
     t.string "namespace"
@@ -160,19 +160,20 @@ ActiveRecord::Schema.define(version: 2021_11_29_195824) do
   end
 
   create_table "interventions", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb3", force: :cascade do |t|
-    t.bigint "building_id"
-    t.bigint "author"
-    t.bigint "battery_id"
+    t.bigint "building_id", null: false
+    t.bigint "author", null: false
+    t.bigint "battery_id", null: false
     t.bigint "column_id"
     t.bigint "elevator_id"
     t.date "start_intervention"
     t.date "end_intervention"
-    t.string "result"
+    t.string "result", default: "Incomplete"
     t.string "report"
-    t.string "status"
+    t.string "status", default: "Pending"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "customer_id"
+    t.bigint "customer_id", null: false
+    t.bigint "employee_id"
     t.index ["author"], name: "fk_rails_372877a32f"
     t.index ["battery_id"], name: "fk_fact_intervention_battery"
     t.index ["building_id"], name: "index_interventions_on_building_id"

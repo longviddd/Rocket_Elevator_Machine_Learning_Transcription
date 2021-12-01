@@ -1,6 +1,7 @@
 class AddForeignKeyFactIntervention < ActiveRecord::Migration[5.2]
   def change
     add_column :interventions, :customer_id, :bigint
+    add_column :interventions, :employee_id, :bigint
     add_foreign_key :interventions, :employees, column: :author
     add_foreign_key :interventions, :customers, name: "fk_fact_intervention_customer"
     add_foreign_key :interventions, :batteries,  name: "fk_fact_intervention_battery"
