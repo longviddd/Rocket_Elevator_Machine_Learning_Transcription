@@ -1,4 +1,4 @@
-ActiveAdmin.register_page "FactIntervention" do
+ActiveAdmin.register_page "Intervention" do
     content do
         render 'form'
     end
