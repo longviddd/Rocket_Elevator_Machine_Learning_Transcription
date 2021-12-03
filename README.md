@@ -1,3 +1,5 @@
+# Link to the REST API: https://github.com/longviddd/Rocket-Elevators-Foundation-REST
+# Link to the GRAPHQL: https://github.com/longviddd/Rocket_Elevator_Graphql
 # Dependency: 
 - Ruby
 - Rails
