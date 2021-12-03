@@ -282,6 +282,10 @@
     }, false);
     function customerDropdownChanged(){
       if(customer_dropdown.value != "None"){
+        removeOptions(building_dropdown)
+        removeOptions(battery_dropdown)
+        removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
         building_dropdown_div.removeAttribute('hidden')
         $.ajax({
                 type: "GET",
@@ -313,6 +317,9 @@
     function buildingDropdownChanged(){
 
       if(building_dropdown.value != "None"){
+        removeOptions(battery_dropdown)
+        removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
         battery_dropdown_div.removeAttribute('hidden')
         $.ajax({
                 type: "GET",
@@ -340,6 +347,8 @@
       }
     }
     function batteryDropdownChanged(){
+      removeOptions(column_dropdown)
+        removeOptions(elevator_dropdown)
       if(battery_dropdown.value != "None"){
         column_dropdown_div.removeAttribute('hidden')
         $.ajax({
@@ -366,6 +375,7 @@
     }
     function columnDropdownChanged(){
       if(column_dropdown.value != "None"){
+        removeOptions(elevator_dropdown)
         elevator_dropdown_div.removeAttribute('hidden')
         $.ajax({
                 type: "GET",
