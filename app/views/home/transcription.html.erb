@@ -8,12 +8,22 @@
 <input type="text" id="url-audio" class="form-control"><br>
 <label>Transcription</label>
 <textarea id='transcript'  class="form-control" rows = "4" cols = "100"></textarea> <br><br>
+<img style="width:30%; padding-bottom:40px" src="https://miro.medium.com/max/1400/1*CsJ05WEGfunYMLGfsT2sXA.gif" id="loading-image"><br>
 <button type="button" onclick="transcriptAudio1()" id = "get_transcript1" class="btn btn-primary">Transcript English audio</button>
 <button type="button" onclick="transcriptAudio2()" id = "get_transcript2" class="btn btn-primary">Transcript French audio</button><br><br>
+
 <br><br>
 <hr>
 </div>
 <script type="text/javascript">
+    $( document ).ready(function() {
+        $('#loading-image').hide()
+        $(document).ajaxStart(function () {
+            $("#loading-image").show();
+        }).ajaxStop(function () {
+            $("#loading-image").hide();
+        });
+    });
     function transcriptAudio1(){
         var transcription_url = document.getElementById('url-audio').value
         $.ajax({
@@ -28,6 +38,7 @@
                 }  
             });
     }
+
     function transcriptAudio2(){
         var transcription_url = document.getElementById('url-audio').value
         $.ajax({
