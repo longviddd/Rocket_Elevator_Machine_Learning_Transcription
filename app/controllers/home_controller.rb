@@ -40,7 +40,7 @@ class HomeController < ApplicationController
       puts transcription.id
       while(!transcription.finished?) do
         puts 'waiting 30s'
-        sleep(30)
+        sleep(1)
         
         transcription = session.get_transcription(id)
       end
