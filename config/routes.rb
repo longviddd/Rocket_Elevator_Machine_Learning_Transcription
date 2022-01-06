@@ -6,9 +6,11 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   root 'home#index'
   get '/residential', to: 'home#residential'
+  get '/transcription', to: 'home#transcription'
   get '/commercial', to: 'home#commercial'
   get '/quote', to: 'home#quote'
   get '/index', to: 'home#index'
+  get '/transcription/loadTranscription', to: 'home#loadTranscription'
   post '/create_quotes' =>'quotes#create'
   post '/create_leads' => 'leads#create'
   get '/users/:id' , to: 'users#show'

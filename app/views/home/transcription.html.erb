@@ -1,0 +1,29 @@
+<div class="container">
+					<header class="text-center mb-60">
+						<h2>Audio Transcription</h2>
+						<p class="lead font-lato">Put in the URL and wait one to two minutes</p>
+						<hr />
+					</header>
+<label>URL for the audio file</label>
+<input type="text" id="url-audio" class="form-control"><br>
+<label>Transcription</label>
+<textarea id='transcript'  class="form-control" rows = "4" cols = "100"></textarea> <br><br>
+<button type="button" onclick="transcriptAudio1()" id = "get_transcript1" class="btn btn-primary">Transcript audio</button><br><br>
+<br><br>
+<hr>
+</div>
+<script type="text/javascript">
+    function transcriptAudio1(){
+        var transcription_url = document.getElementById('url-audio').value
+        $.ajax({
+                type: "GET",
+                url: "/transcription/loadTranscription/",
+                data: {transcription_url: transcription_url},
+                dataType: "json",
+                success: function(data){
+                    console.log(data.transcription)
+                    document.getElementById('transcript').value = data.transcription;
+                }  
+            });
+    }
+</script>
