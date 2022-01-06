@@ -20,6 +20,7 @@
                 url: "/transcription/loadTranscription/",
                 data: {transcription_url: transcription_url},
                 dataType: "json",
+                timeout: 0,
                 success: function(data){
                     console.log(data.transcription)
                     document.getElementById('transcript').value = data.transcription;
