@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get '/quote', to: 'home#quote'
   get '/index', to: 'home#index'
   get '/transcription/loadTranscription', to: 'home#loadTranscription'
+  get '/transcription/loadTranscriptionFrench', to: 'home#loadTranscriptionFrench'
   post '/create_quotes' =>'quotes#create'
   post '/create_leads' => 'leads#create'
   get '/users/:id' , to: 'users#show'
