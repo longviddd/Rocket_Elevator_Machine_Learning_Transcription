@@ -13,10 +13,6 @@ class HomeController < ApplicationController
   def quote; end
   def transcription; end
   def loadTranscription
-    AzureSTT.configure do |config|
-      config.region = 'eastus'
-      config.subscription_key = 'your_key'
-    end
     puts 'function loaded'
     json = "857fd42ac6944a76a27fbc3df622b2d6";
       puts 'function loaded 2'
