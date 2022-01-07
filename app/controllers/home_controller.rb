@@ -28,7 +28,7 @@ class HomeController < ApplicationController
       }
       content_urls = []
       content_urls.append(params[:transcription_url])
-      session = AzureSTT::Session.new(region: 'eastus', subscription_key: '857fd42ac6944a76a27fbc3df622b2d6')
+      session = AzureSTT::Session.new(region: ENV['MICROSOFT_AZURE_REGION'], subscription_key: ENV['MICROSOFT_AZURE_KEY'])
       transcription = session.create_transcription(
         content_urls: content_urls,
         properties: properties,
