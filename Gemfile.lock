@@ -403,9 +403,6 @@ GEM
     ruby2_keywords (0.0.5)
     ruby_http_client (3.5.2)
     rubyzip (2.3.2)
-    rvm1-capistrano3 (1.4.0)
-      capistrano (~> 3.0)
-      sshkit (>= 1.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -542,7 +539,6 @@ DEPENDENCIES
   rails (~> 5.2.6)
   responders
   rubocop
-  rvm1-capistrano3
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid-actionmailer (~> 2.4.0)
