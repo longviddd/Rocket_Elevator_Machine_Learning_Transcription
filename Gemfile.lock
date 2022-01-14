@@ -90,7 +90,6 @@ GEM
       dry-struct (~> 1)
       httparty (~> 0.17)
     bcrypt (3.1.16)
-    bindex (0.8.1)
     bootsnap (1.9.1)
       msgpack (~> 1.0)
     bootstrap (5.1.3)
@@ -110,6 +109,9 @@ GEM
     capistrano-rails (1.6.1)
       capistrano (~> 3.1)
       capistrano-bundler (>= 1.1, < 3)
+    capistrano-rvm (0.1.2)
+      capistrano (~> 3.0)
+      sshkit (~> 1.2)
     capistrano3-puma (5.2.0)
       capistrano (~> 3.7)
       capistrano-bundler
@@ -291,10 +293,6 @@ GEM
       activerecord
       kaminari-core (= 1.2.1)
     kaminari-core (1.2.1)
-    listen (3.1.5)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
-      ruby_dep (~> 1.2)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -403,12 +401,8 @@ GEM
       parser (>= 3.0.1.1)
     ruby-progressbar (1.11.0)
     ruby2_keywords (0.0.5)
-    ruby_dep (1.5.0)
     ruby_http_client (3.5.2)
     rubyzip (2.3.2)
-    rvm1-capistrano3 (1.4.0)
-      capistrano (~> 3.0)
-      sshkit (>= 1.2)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
     sass-listen (4.0.0)
@@ -447,10 +441,6 @@ GEM
       websocket-driver
     sort_alphabetical (1.1.0)
       unicode_utils (>= 1.2.2)
-    spring (2.1.1)
-    spring-watcher-listen (2.0.1)
-      listen (>= 2.7, < 4.0)
-      spring (>= 1.2, < 3.0)
     sprockets (3.7.2)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
@@ -484,11 +474,6 @@ GEM
     uri (0.11.0)
     warden (1.2.9)
       rack (>= 2.0.9)
-    web-console (3.7.0)
-      actionview (>= 5.0)
-      activemodel (>= 5.0)
-      bindex (>= 0.4.0)
-      railties (>= 5.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.5)
@@ -514,8 +499,9 @@ DEPENDENCIES
   byebug
   cancancan
   capistrano
-  capistrano-bundler (>= 1.1.0)
-  capistrano-rails (~> 1.4)
+  capistrano-bundler
+  capistrano-rails
+  capistrano-rvm
   capistrano3-puma
   capybara (>= 2.15)
   chartkick
@@ -545,29 +531,24 @@ DEPENDENCIES
   jquery-ui-rails
   json
   jwt
-  listen (>= 3.0.5, < 3.2)
   mysql2 (>= 0.4.4, < 0.6.0)
   net-http
   pg
-  puma (= 4.3.9)
+  puma
   pundit
   rails (~> 5.2.6)
   responders
   rubocop
-  rvm1-capistrano3
   sass-rails (~> 5.0)
   selenium-webdriver
   sendgrid-actionmailer (~> 2.4.0)
   sendgrid-ruby
   slack-notifier
   slack-ruby-client
-  spring
-  spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)
   twilio-ruby
   tzinfo-data
   uglifier (>= 1.3.0)
-  web-console (>= 3.3.0)
   zendesk_api
 
 RUBY VERSION
