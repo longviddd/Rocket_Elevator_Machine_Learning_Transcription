@@ -53,6 +53,7 @@ group :development, :test do
 end
 
 group :development do
+    gem 'listen'
     gem 'capistrano-rvm', require: false
     gem 'capistrano',         require: false
     gem 'capistrano-rails',   require: false
