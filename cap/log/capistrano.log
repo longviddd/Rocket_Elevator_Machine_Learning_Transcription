@@ -4367,3 +4367,34 @@ From https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription
    61b12ed..b4063da  master     -> master
   INFO [6b337b50] Finished in 0.846 seconds with exit status 0 (successful).
  DEBUG [a3857c59] 	error: Could not fetch origin
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-01-14 20:36:16 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [c3df136f] Running [ -d ~/.rvm ] on 143.198.97.178
+ DEBUG [c3df136f] Command: [ -d ~/.rvm ]
+ DEBUG [8b4701d0] Running [ -d ~/.rvm ] as long@143.198.97.178
+ DEBUG [8b4701d0] Command: [ -d ~/.rvm ]
+ DEBUG [c3df136f] Finished in 7.696 seconds with exit status 0 (successful).
+ DEBUG [8b4701d0] Finished in 37.840 seconds with exit status 0 (successful).
+ DEBUG [7c13928c] Running ~/.rvm/bin/rvm version on 143.198.97.178
+ DEBUG [7c13928c] Command: ~/.rvm/bin/rvm version
+ DEBUG [7280de48] Running ~/.rvm/bin/rvm version as long@143.198.97.178
+ DEBUG [7280de48] Command: ~/.rvm/bin/rvm version
+ DEBUG [7280de48] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7280de48] Finished in 0.782 seconds with exit status 0 (successful).
+ DEBUG [b9ec9043] Running ~/.rvm/bin/rvm current as long@143.198.97.178
+ DEBUG [b9ec9043] Command: ~/.rvm/bin/rvm current
+ DEBUG [b9ec9043] 	ruby-3.0.0
+ DEBUG [b9ec9043] Finished in 0.978 seconds with exit status 0 (successful).
+ DEBUG [7a89a44e] Running ~/.rvm/bin/rvm 2.6.6 do ruby --version as long@143.198.97.178
+ DEBUG [7a89a44e] Command: ~/.rvm/bin/rvm 2.6.6 do ruby --version
+ DEBUG [7a89a44e] 	ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+ DEBUG [7a89a44e] Finished in 1.185 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-01-14 20:37:28 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [a26acbb0] Running [ -d ~/.rvm ] on 143.198.97.178
+ DEBUG [a26acbb0] Command: [ -d ~/.rvm ]
+ DEBUG [0a018873] Running [ -d ~/.rvm ] as long@143.198.97.178
+ DEBUG [0a018873] Command: [ -d ~/.rvm ]
+ DEBUG [a26acbb0] Finished in 5.184 seconds with exit status 0 (successful).
