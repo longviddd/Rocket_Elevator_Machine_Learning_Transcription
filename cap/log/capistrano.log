@@ -671,3 +671,435 @@ ArgumentError: Missing `secret_key_base` for 'production' environment, set this 
 /home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:22:in `<main>'
  DEBUG [6d4720bf] 	Tasks: TOP => environment
 (See full trace by running task with --trace)
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-01-14 19:17:38 -0500 cap production deploy:initial
+  INFO ---------------------------------------------------------------------------
+ DEBUG [91d43182] Running [ -d ~/.rvm ] on 143.198.97.178
+ DEBUG [91d43182] Command: [ -d ~/.rvm ]
+ DEBUG [91d43182] Finished in 25.682 seconds with exit status 0 (successful).
+ DEBUG [d06578f9] Running ~/.rvm/bin/rvm version on 143.198.97.178
+ DEBUG [d06578f9] Command: ~/.rvm/bin/rvm version
+ DEBUG [d06578f9] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [d06578f9] Finished in 0.629 seconds with exit status 0 (successful).
+ DEBUG [e1c4d25d] Running ~/.rvm/bin/rvm current on 143.198.97.178
+ DEBUG [e1c4d25d] Command: ~/.rvm/bin/rvm current
+ DEBUG [e1c4d25d] 	ruby-3.0.0
+ DEBUG [e1c4d25d] 	
+ DEBUG [e1c4d25d] Finished in 0.712 seconds with exit status 0 (successful).
+ DEBUG [6a0d839c] Running ~/.rvm/bin/rvm 2.6.6 do ruby --version on 143.198.97.178
+ DEBUG [6a0d839c] Command: ~/.rvm/bin/rvm 2.6.6 do ruby --version
+ DEBUG [6a0d839c] 	ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+ DEBUG [6a0d839c] 	
+ DEBUG [6a0d839c] Finished in 0.813 seconds with exit status 0 (successful).
+  INFO [2a63af6d] Running /usr/bin/env mkdir -p /tmp on 143.198.97.178
+ DEBUG [2a63af6d] Command: /usr/bin/env mkdir -p /tmp
+  INFO [2a63af6d] Finished in 0.270 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-a1b2be6eb6de751b607e.sh 0.0%
+  INFO Uploading /tmp/git-ssh-a1b2be6eb6de751b607e.sh 100.0%
+  INFO [d13e0cf9] Running /usr/bin/env chmod 700 /tmp/git-ssh-a1b2be6eb6de751b607e.sh on 143.198.97.178
+ DEBUG [d13e0cf9] Command: /usr/bin/env chmod 700 /tmp/git-ssh-a1b2be6eb6de751b607e.sh
+  INFO [d13e0cf9] Finished in 0.270 seconds with exit status 0 (successful).
+  INFO [d4fb1c87] Running /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD on 143.198.97.178
+ DEBUG [d4fb1c87] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD )
+ DEBUG [d4fb1c87] 	c0d92d1014841265a7b5f58cb3dffc1c8fd4512c	HEAD
+  INFO [d4fb1c87] Finished in 0.552 seconds with exit status 0 (successful).
+  INFO [a993c733] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases on 143.198.97.178
+ DEBUG [a993c733] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases
+  INFO [a993c733] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [9b27773c] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets on 143.198.97.178
+ DEBUG [9b27773c] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets
+  INFO [9b27773c] Finished in 0.313 seconds with exit status 0 (successful).
+  INFO [c8cfaff0] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config on 143.198.97.178
+ DEBUG [c8cfaff0] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config
+  INFO [c8cfaff0] Finished in 0.278 seconds with exit status 0 (successful).
+ DEBUG [fe0daacb] Running [ -f /home/long/apps/LongNguyen/shared/config/database.yml ] on 143.198.97.178
+ DEBUG [fe0daacb] Command: [ -f /home/long/apps/LongNguyen/shared/config/database.yml ]
+ DEBUG [fe0daacb] Finished in 0.342 seconds with exit status 0 (successful).
+ DEBUG [6588f391] Running [ -f /home/long/apps/LongNguyen/shared/config/application.yml ] on 143.198.97.178
+ DEBUG [6588f391] Command: [ -f /home/long/apps/LongNguyen/shared/config/application.yml ]
+ DEBUG [6588f391] Finished in 0.326 seconds with exit status 0 (successful).
+ DEBUG [037d7a5f] Running [ -f /home/long/apps/LongNguyen/shared/puma.rb ] on 143.198.97.178
+ DEBUG [037d7a5f] Command: [ -f /home/long/apps/LongNguyen/shared/puma.rb ]
+ DEBUG [037d7a5f] Finished in 0.486 seconds with exit status 0 (successful).
+ DEBUG [fbe45b02] Running [ -f /home/long/apps/LongNguyen/current/REVISION ] on 143.198.97.178
+ DEBUG [fbe45b02] Command: [ -f /home/long/apps/LongNguyen/current/REVISION ]
+ DEBUG [fbe45b02] Finished in 0.456 seconds with exit status 1 (failed).
+ DEBUG [0e7433ca] Running [ -f /home/long/apps/LongNguyen/repo/HEAD ] on 143.198.97.178
+ DEBUG [0e7433ca] Command: [ -f /home/long/apps/LongNguyen/repo/HEAD ]
+ DEBUG [0e7433ca] Finished in 0.333 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/long/apps/LongNguyen/repo
+ DEBUG [3ecfa211] Running if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [3ecfa211] Command: if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi
+ DEBUG [3ecfa211] Finished in 0.281 seconds with exit status 0 (successful).
+  INFO [32b78ba2] Running /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git on 143.198.97.178
+ DEBUG [32b78ba2] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git )
+  INFO [32b78ba2] Finished in 0.331 seconds with exit status 0 (successful).
+  INFO [c5e6f8e5] Running /usr/bin/env git remote update --prune on 143.198.97.178
+ DEBUG [c5e6f8e5] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [c5e6f8e5] 	Fetching origin
+ DEBUG [c5e6f8e5] 	remote: Enumerating objects: 12, done.[K
+ DEBUG [c5e6f8e5] 	
+ DEBUG [c5e6f8e5] 	remote: Counting objects:   8% (1/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  16% (2/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  25% (3/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  33% (4/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  41% (5/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  50% (6/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  58% (7/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  66% (8/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  75% (9/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  83% (10/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects:  91% (11/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects: 100% (12/12)[K
+ DEBUG [c5e6f8e5] 	remote: Counting objects: 100% (12/12), done.[K
+ DEBUG [c5e6f8e5] 	
+ DEBUG [c5e6f8e5] 	remote: Compressing objects:  33% (1/3)[K
+ DEBUG [c5e6f8e5] 	remote: Compressing objects:  66% (2/3)[K
+ DEBUG [c5e6f8e5] 	remote: Compressing objects: 100% (3/3)[K
+ DEBUG [c5e6f8e5] 	remote: Compressing objects: 100% (3/3), done.[K
+ DEBUG [c5e6f8e5] 	
+ DEBUG [c5e6f8e5] 	remote: Total 8 (delta 3), reused 8 (delta 3), pack-reused 0[K
+ DEBUG [c5e6f8e5] 	
+ DEBUG [c5e6f8e5] 	Unpacking objects:  12% (1/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  25% (2/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  37% (3/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  50% (4/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  62% (5/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  75% (6/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects:  87% (7/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects: 100% (8/8)
+ DEBUG [c5e6f8e5] 	Unpacking objects: 100% (8/8), 7.45 KiB | 1.24 MiB/s, done.
+ DEBUG [c5e6f8e5] 	
+ DEBUG [c5e6f8e5] 	From https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription
+   bdde3e9..c0d92d1  master     -> master
+  INFO [c5e6f8e5] Finished in 0.889 seconds with exit status 0 (successful).
+ DEBUG [c39058ee] Running if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [c39058ee] Command: if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi
+ DEBUG [c39058ee] Finished in 0.948 seconds with exit status 0 (successful).
+  INFO [816c7ee1] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810 on 143.198.97.178
+ DEBUG [816c7ee1] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810 )
+  INFO [816c7ee1] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO [ca0c347b] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/long/apps/LongNguyen/releases/20220115001810 on 143.198.97.178
+ DEBUG [ca0c347b] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /home/long/apps/LongNguyen/releases/20220115001810 )
+  INFO [ca0c347b] Finished in 0.714 seconds with exit status 0 (successful).
+ DEBUG [380d4cdc] Running if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [380d4cdc] Command: if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi
+ DEBUG [380d4cdc] Finished in 0.325 seconds with exit status 0 (successful).
+ DEBUG [9af315cc] Running /usr/bin/env git rev-list --max-count=1 master on 143.198.97.178
+ DEBUG [9af315cc] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-a1b2be6eb6de751b607e.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [9af315cc] 	c0d92d1014841265a7b5f58cb3dffc1c8fd4512c
+ DEBUG [9af315cc] Finished in 0.286 seconds with exit status 0 (successful).
+ DEBUG [85b6e46a] Running if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [85b6e46a] Command: if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi
+ DEBUG [85b6e46a] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [9cc2c589] Running /usr/bin/env echo "c0d92d1014841265a7b5f58cb3dffc1c8fd4512c" > REVISION on 143.198.97.178
+ DEBUG [9cc2c589] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && /usr/bin/env echo "c0d92d1014841265a7b5f58cb3dffc1c8fd4512c" > REVISION
+  INFO [9cc2c589] Finished in 0.288 seconds with exit status 0 (successful).
+  INFO [714d7742] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810/config on 143.198.97.178
+ DEBUG [714d7742] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810/config
+  INFO [714d7742] Finished in 0.336 seconds with exit status 0 (successful).
+ DEBUG [0e67b394] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml ] on 143.198.97.178
+ DEBUG [0e67b394] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml ]
+ DEBUG [0e67b394] Finished in 0.277 seconds with exit status 1 (failed).
+ DEBUG [504d21b6] Running [ -f /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml ] on 143.198.97.178
+ DEBUG [504d21b6] Command: [ -f /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml ]
+ DEBUG [504d21b6] Finished in 0.307 seconds with exit status 1 (failed).
+  INFO [c60642d8] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/config/database.yml /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml on 143.198.97.178
+ DEBUG [c60642d8] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/config/database.yml /home/long/apps/LongNguyen/releases/20220115001810/config/database.yml
+  INFO [c60642d8] Finished in 0.275 seconds with exit status 0 (successful).
+ DEBUG [c7851f9b] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml ] on 143.198.97.178
+ DEBUG [c7851f9b] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml ]
+ DEBUG [c7851f9b] Finished in 0.306 seconds with exit status 1 (failed).
+ DEBUG [c72a2b0c] Running [ -f /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml ] on 143.198.97.178
+ DEBUG [c72a2b0c] Command: [ -f /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml ]
+ DEBUG [c72a2b0c] Finished in 0.297 seconds with exit status 1 (failed).
+  INFO [d87f5f10] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/config/application.yml /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml on 143.198.97.178
+ DEBUG [d87f5f10] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/config/application.yml /home/long/apps/LongNguyen/releases/20220115001810/config/application.yml
+  INFO [d87f5f10] Finished in 0.321 seconds with exit status 0 (successful).
+  INFO [18c1a607] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810/tmp /home/long/apps/LongNguyen/releases/20220115001810 /home/long/apps/LongNguyen/releases/20220115001810/public on 143.198.97.178
+ DEBUG [18c1a607] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/releases/20220115001810/tmp /home/long/apps/LongNguyen/releases/20220115001810 /home/long/apps/LongNguyen/releases/20220115001810/public
+  INFO [18c1a607] Finished in 0.276 seconds with exit status 0 (successful).
+ DEBUG [5300823a] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids ] on 143.198.97.178
+ DEBUG [5300823a] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids ]
+ DEBUG [5300823a] Finished in 0.315 seconds with exit status 1 (failed).
+ DEBUG [92c6c8d2] Running [ -d /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids ] on 143.198.97.178
+ DEBUG [92c6c8d2] Command: [ -d /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids ]
+ DEBUG [92c6c8d2] Finished in 0.277 seconds with exit status 1 (failed).
+  INFO [5db036e4] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids on 143.198.97.178
+ DEBUG [5db036e4] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/releases/20220115001810/tmp/pids
+  INFO [5db036e4] Finished in 0.314 seconds with exit status 0 (successful).
+ DEBUG [605bb1d7] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets ] on 143.198.97.178
+ DEBUG [605bb1d7] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets ]
+ DEBUG [605bb1d7] Finished in 0.278 seconds with exit status 1 (failed).
+ DEBUG [c8c3c83c] Running [ -d /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets ] on 143.198.97.178
+ DEBUG [c8c3c83c] Command: [ -d /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets ]
+ DEBUG [c8c3c83c] Finished in 0.322 seconds with exit status 1 (failed).
+  INFO [97680152] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets on 143.198.97.178
+ DEBUG [97680152] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/releases/20220115001810/tmp/sockets
+  INFO [97680152] Finished in 0.296 seconds with exit status 0 (successful).
+ DEBUG [3e46ad46] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/log ] on 143.198.97.178
+ DEBUG [3e46ad46] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/log ]
+ DEBUG [3e46ad46] Finished in 0.334 seconds with exit status 1 (failed).
+ DEBUG [2d3b41a2] Running [ -d /home/long/apps/LongNguyen/releases/20220115001810/log ] on 143.198.97.178
+ DEBUG [2d3b41a2] Command: [ -d /home/long/apps/LongNguyen/releases/20220115001810/log ]
+ DEBUG [2d3b41a2] Finished in 0.278 seconds with exit status 0 (successful).
+  INFO [d39c5ae4] Running /usr/bin/env rm -rf /home/long/apps/LongNguyen/releases/20220115001810/log on 143.198.97.178
+ DEBUG [d39c5ae4] Command: /usr/bin/env rm -rf /home/long/apps/LongNguyen/releases/20220115001810/log
+  INFO [d39c5ae4] Finished in 0.318 seconds with exit status 0 (successful).
+  INFO [54146d5d] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/releases/20220115001810/log on 143.198.97.178
+ DEBUG [54146d5d] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/releases/20220115001810/log
+  INFO [54146d5d] Finished in 0.272 seconds with exit status 0 (successful).
+ DEBUG [4cf5c99c] Running [ -L /home/long/apps/LongNguyen/releases/20220115001810/public/assets ] on 143.198.97.178
+ DEBUG [4cf5c99c] Command: [ -L /home/long/apps/LongNguyen/releases/20220115001810/public/assets ]
+ DEBUG [4cf5c99c] Finished in 0.314 seconds with exit status 1 (failed).
+ DEBUG [ceb13ae0] Running [ -d /home/long/apps/LongNguyen/releases/20220115001810/public/assets ] on 143.198.97.178
+ DEBUG [ceb13ae0] Command: [ -d /home/long/apps/LongNguyen/releases/20220115001810/public/assets ]
+ DEBUG [ceb13ae0] Finished in 0.271 seconds with exit status 1 (failed).
+  INFO [1cbc32ab] Running /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/public/assets /home/long/apps/LongNguyen/releases/20220115001810/public/assets on 143.198.97.178
+ DEBUG [1cbc32ab] Command: /usr/bin/env ln -s /home/long/apps/LongNguyen/shared/public/assets /home/long/apps/LongNguyen/releases/20220115001810/public/assets
+  INFO [1cbc32ab] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [da475155] Running if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [da475155] Command: if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi
+ DEBUG [da475155] Finished in 0.273 seconds with exit status 0 (successful).
+  INFO [0d9d7419] Running ~/.rvm/bin/rvm 2.6.6 do bundle config --local deployment true on 143.198.97.178
+ DEBUG [0d9d7419] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && ~/.rvm/bin/rvm 2.6.6 do bundle config --local deployment true
+  INFO [0d9d7419] Finished in 1.207 seconds with exit status 0 (successful).
+  INFO [f481a260] Running ~/.rvm/bin/rvm 2.6.6 do bundle config --local path /home/long/apps/LongNguyen/shared/bundle on 143.198.97.178
+ DEBUG [f481a260] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && ~/.rvm/bin/rvm 2.6.6 do bundle config --local path /home/long/apps/LongNguyen/shared/bundle
+  INFO [f481a260] Finished in 1.292 seconds with exit status 0 (successful).
+  INFO [5f0c803b] Running ~/.rvm/bin/rvm 2.6.6 do bundle config --local without development:test on 143.198.97.178
+ DEBUG [5f0c803b] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && ~/.rvm/bin/rvm 2.6.6 do bundle config --local without development:test
+  INFO [5f0c803b] Finished in 1.092 seconds with exit status 0 (successful).
+ DEBUG [69ca16d6] Running if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [69ca16d6] Command: if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi
+ DEBUG [69ca16d6] Finished in 0.285 seconds with exit status 0 (successful).
+ DEBUG [4bd494bd] Running ~/.rvm/bin/rvm 2.6.6 do bundle check on 143.198.97.178
+ DEBUG [4bd494bd] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && ~/.rvm/bin/rvm 2.6.6 do bundle check
+ DEBUG [4bd494bd] 	The Gemfile's dependencies are satisfied
+ DEBUG [4bd494bd] 	
+ DEBUG [4bd494bd] Finished in 1.791 seconds with exit status 0 (successful).
+  INFO The Gemfile's dependencies are satisfied, skipping installation
+ DEBUG [64f9395a] Running if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [64f9395a] Command: if test ! -d /home/long/apps/LongNguyen/releases/20220115001810; then echo "Directory does not exist '/home/long/apps/LongNguyen/releases/20220115001810'" 1>&2; false; fi
+ DEBUG [64f9395a] Finished in 0.277 seconds with exit status 0 (successful).
+  INFO [09d520f1] Running ~/.rvm/bin/rvm 2.6.6 do bundle exec rake assets:precompile on 143.198.97.178
+ DEBUG [09d520f1] Command: cd /home/long/apps/LongNguyen/releases/20220115001810 && ( export RAILS_ENV="production" RAILS_GROUPS="" ; ~/.rvm/bin/rvm 2.6.6 do bundle exec rake assets:precompile )
+ DEBUG [09d520f1] 	/home/long/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/net/protocol.rb:66: warning: already initialized constant Net::ProtocRetryError
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/net-protocol-0.1.2/lib/net/protocol.rb:68: warning: previous definition of ProtocRetryError was here
+/home/long/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/net/protocol.rb:206: warning: already initialized constant Net::BufferedIO::BUFSIZE
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/net-protocol-0.1.2/lib/net/protocol.rb:208: warning: previous definition of BUFSIZE was here
+ DEBUG [09d520f1] 	/home/long/.rvm/rubies/ruby-2.6.6/lib/ruby/2.6.0/net/protocol.rb:503: warning: already initialized constant Net::NetPrivate::Socket
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/net-protocol-0.1.2/lib/net/protocol.rb:504: warning: previous definition of Socket was here
+ DEBUG [09d520f1] 	rake aborted!
+ActiveRecord::AdapterNotSpecified: 'production' database is not configured. Available: ["development", "data_warehouse"]
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/connection_specification.rb:260:in `resolve_symbol_connection'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/connection_specification.rb:241:in `resolve_connection'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/connection_adapters/connection_specification.rb:143:in `resolve'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/connection_handling.rb:57:in `establish_connection'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/railtie.rb:136:in `block (2 levels) in <class:Railtie>'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:71:in `instance_eval'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:71:in `block in execute_hook'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:62:in `with_execution_control'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:67:in `execute_hook'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:52:in `block in run_load_hooks'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:51:in `each'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/lazy_load_hooks.rb:51:in `run_load_hooks'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/base.rb:328:in `<module:ActiveRecord>'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activerecord-5.2.6/lib/active_record/base.rb:27:in `<main>'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+/home/long/apps/LongNguyen/releases/20220115001810/app/models/application_record.rb:3:in `<main>'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bun
+ DEBUG [09d520f1] 	dle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:13:in `loading'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `load_interlock'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:356:in `require_or_load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:195:in `const_missing'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/releases/20220115001810/app/models/user.rb:3:in `<main>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/
+ DEBUG [09d520f1] 	LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:378:in `block in require_or_load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `block in load_interlock'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:14:in `block in loading'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/concurrency/share_lock.rb:151:in `exclusive'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies/interlock.rb:13:in `loading'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:37:in `load_interlock'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:356:in `require_or_load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:510:in `load_missing_constant'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib
+ DEBUG [09d520f1] 	/active_support/dependencies.rb:195:in `const_missing'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/inflector/methods.rb:283:in `const_get'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/inflector/methods.rb:283:in `block in constantize'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/inflector/methods.rb:281:in `each'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/inflector/methods.rb:281:in `inject'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/inflector/methods.rb:281:in `constantize'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:582:in `get'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:613:in `constantize'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise.rb:316:in `get'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/mapping.rb:83:in `to'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/mapping.rb:78:in `modules'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/mapping.rb:95:in `routes'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/mapping.rb:162:in `default_used_route'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/mapping.rb:72:in `initialize'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise.rb:346:in `new'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise.rb:346:in `add_mapping'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/rails/routes.rb:243:in `block in devise_for'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/de
+ DEBUG [09d520f1] 	vise/rails/routes.rb:242:in `each'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/devise-4.8.0/lib/devise/rails/routes.rb:242:in `devise_for'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/releases/20220115001810/config/routes.rb:5:in `block in <main>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:432:in `instance_exec'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:432:in `eval_block'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:414:in `draw'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/releases/20220115001810/config/routes.rb:3:in `<main>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:60:in `load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:60:in `load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `block in load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:285:in `load'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:41:in `block in load_paths'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:41:in `each'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:41:in `load_paths'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:20:in `reload!'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:
+ DEBUG [09d520f1] 	30:in `block in updater'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/file_update_checker.rb:83:in `execute'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/routes_reloader.rb:10:in `execute'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application/finisher.rb:130:in `block in <module:Finisher>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `instance_exec'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/initializable.rb:32:in `run'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/initializable.rb:61:in `block in run_initializers'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/initializable.rb:60:in `run_initializers'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application.rb:361:in `initialize!'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/releases/20220115001810/config/environment.rb:7:in `<main>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:23:in `block in require_with_bootsnap_lfi'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/loaded_features_index.rb:92:in `register'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:22:in `require_with_bootsnap_lfi'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/bootsnap-1.9.1/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:31:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `block in require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongN
+ DEBUG [09d520f1] 	guyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:257:in `load_dependency'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/activesupport-5.2.6/lib/active_support/dependencies.rb:291:in `require'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application.rb:337:in `require_environment!'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/railties-5.2.6/lib/rails/application.rb:520:in `block in run_tasks_blocks'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/sprockets-rails-3.4.0/lib/sprockets/rails/task.rb:61:in `block (2 levels) in define'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/gems/rake-13.0.6/exe/rake:27:in `<top (required)>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:22:in `eval'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	/home/long/apps/LongNguyen/shared/bundle/ruby/2.6.0/bin/ruby_executable_hooks:22:in `<main>'
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	Tasks: TOP => environment
+ DEBUG [09d520f1] 	
+ DEBUG [09d520f1] 	(See full trace by running task with --trace)
+ DEBUG [09d520f1] 	
