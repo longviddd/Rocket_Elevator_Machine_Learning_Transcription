@@ -4005,3 +4005,193 @@ autoprefixer: /home/long/apps/LongNguyen/releases/20220115011654/app/assets/styl
   INFO [17eddad2] Running /usr/bin/env echo "Branch master (at af1f3a289181ae490dc1fdd83466023044f1b361) deployed as release 20220115011654 by longnguyen" >> /home/long/apps/LongNguyen/revisions.log on 143.198.97.178
  DEBUG [17eddad2] Command: cd /home/long/apps/LongNguyen/releases && /usr/bin/env echo "Branch master (at af1f3a289181ae490dc1fdd83466023044f1b361) deployed as release 20220115011654 by longnguyen" >> /home/long/apps/LongNguyen/revisions.log
   INFO [17eddad2] Finished in 0.440 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-01-14 20:31:59 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [bf74d526] Running [ -d ~/.rvm ] on 143.198.97.178
+ DEBUG [bf74d526] Command: [ -d ~/.rvm ]
+ DEBUG [c5957055] Running [ -d ~/.rvm ] as long@143.198.97.178
+ DEBUG [c5957055] Command: [ -d ~/.rvm ]
+ DEBUG [c5957055] Finished in 7.343 seconds with exit status 0 (successful).
+ DEBUG [bf74d526] Finished in 62.835 seconds with exit status 0 (successful).
+ DEBUG [7d6a636b] Running ~/.rvm/bin/rvm version on 143.198.97.178
+ DEBUG [7d6a636b] Command: ~/.rvm/bin/rvm version
+ DEBUG [a521eebd] Running ~/.rvm/bin/rvm version as long@143.198.97.178
+ DEBUG [a521eebd] Command: ~/.rvm/bin/rvm version
+ DEBUG [7d6a636b] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [7d6a636b] 	
+ DEBUG [7d6a636b] Finished in 0.810 seconds with exit status 0 (successful).
+ DEBUG [6ad4240c] Running ~/.rvm/bin/rvm current on 143.198.97.178
+ DEBUG [6ad4240c] Command: ~/.rvm/bin/rvm current
+ DEBUG [6ad4240c] 	ruby-3.0.0
+ DEBUG [6ad4240c] Finished in 0.716 seconds with exit status 0 (successful).
+ DEBUG [2f0f7b12] Running ~/.rvm/bin/rvm 2.6.6 do ruby --version on 143.198.97.178
+ DEBUG [2f0f7b12] Command: ~/.rvm/bin/rvm 2.6.6 do ruby --version
+ DEBUG [2f0f7b12] 	ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+ DEBUG [2f0f7b12] Finished in 0.779 seconds with exit status 0 (successful).
+  INFO ---------------------------------------------------------------------------
+  INFO START 2022-01-14 20:33:58 -0500 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [6c13a8c8] Running [ -d ~/.rvm ] on 143.198.97.178
+ DEBUG [6c13a8c8] Command: [ -d ~/.rvm ]
+ DEBUG [41135add] Running [ -d ~/.rvm ] as long@143.198.97.178
+ DEBUG [41135add] Command: [ -d ~/.rvm ]
+ DEBUG [41135add] Finished in 4.963 seconds with exit status 0 (successful).
+ DEBUG [6c13a8c8] Finished in 13.023 seconds with exit status 0 (successful).
+ DEBUG [e0221dee] Running ~/.rvm/bin/rvm version on 143.198.97.178
+ DEBUG [e0221dee] Command: ~/.rvm/bin/rvm version
+ DEBUG [10b0320f] Running ~/.rvm/bin/rvm version as long@143.198.97.178
+ DEBUG [10b0320f] Command: ~/.rvm/bin/rvm version
+ DEBUG [10b0320f] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [e0221dee] 	rvm 1.29.12 (latest) by Michal Papis, Piotr Kuczynski, Wayne E. Seguin [https://rvm.io]
+ DEBUG [10b0320f] Finished in 0.946 seconds with exit status 0 (successful).
+ DEBUG [e0221dee] Finished in 0.947 seconds with exit status 0 (successful).
+ DEBUG [bfe32641] Running ~/.rvm/bin/rvm current as long@143.198.97.178
+ DEBUG [bfe32641] Command: ~/.rvm/bin/rvm current
+ DEBUG [1378464a] Running ~/.rvm/bin/rvm current on 143.198.97.178
+ DEBUG [1378464a] Command: ~/.rvm/bin/rvm current
+ DEBUG [1378464a] 	ruby-3.0.0
+ DEBUG [1378464a] 	
+ DEBUG [bfe32641] 	ruby-3.0.0
+ DEBUG [1378464a] Finished in 0.919 seconds with exit status 0 (successful).
+ DEBUG [bfe32641] Finished in 0.920 seconds with exit status 0 (successful).
+ DEBUG [7945b2a5] Running ~/.rvm/bin/rvm 2.6.6 do ruby --version as long@143.198.97.178
+ DEBUG [a4f9e69d] Running ~/.rvm/bin/rvm 2.6.6 do ruby --version on 143.198.97.178
+ DEBUG [a4f9e69d] Command: ~/.rvm/bin/rvm 2.6.6 do ruby --version
+ DEBUG [7945b2a5] Command: ~/.rvm/bin/rvm 2.6.6 do ruby --version
+ DEBUG [7945b2a5] 	ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+ DEBUG [a4f9e69d] 	ruby 2.6.6p146 (2020-03-31 revision 67876) [x86_64-linux]
+ DEBUG [a4f9e69d] Finished in 1.022 seconds with exit status 0 (successful).
+ DEBUG [7945b2a5] Finished in 1.022 seconds with exit status 0 (successful).
+  INFO [520ed2d2] Running /usr/bin/env mkdir -p /tmp on 143.198.97.178
+ DEBUG [520ed2d2] Command: /usr/bin/env mkdir -p /tmp
+  INFO [0c39ff74] Running /usr/bin/env mkdir -p /tmp as long@143.198.97.178
+ DEBUG [0c39ff74] Command: /usr/bin/env mkdir -p /tmp
+  INFO [520ed2d2] Finished in 0.336 seconds with exit status 0 (successful).
+  INFO [0c39ff74] Finished in 0.337 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-49a201e347f16d367f52.sh 0.0%
+ DEBUG Uploading /tmp/git-ssh-49a201e347f16d367f52.sh 0.0%
+  INFO Uploading /tmp/git-ssh-49a201e347f16d367f52.sh 100.0%
+  INFO Uploading /tmp/git-ssh-49a201e347f16d367f52.sh 100.0%
+  INFO [96489965] Running /usr/bin/env chmod 700 /tmp/git-ssh-49a201e347f16d367f52.sh on 143.198.97.178
+ DEBUG [96489965] Command: /usr/bin/env chmod 700 /tmp/git-ssh-49a201e347f16d367f52.sh
+  INFO [90ff8e9c] Running /usr/bin/env chmod 700 /tmp/git-ssh-49a201e347f16d367f52.sh as long@143.198.97.178
+ DEBUG [90ff8e9c] Command: /usr/bin/env chmod 700 /tmp/git-ssh-49a201e347f16d367f52.sh
+  INFO [90ff8e9c] Finished in 0.341 seconds with exit status 0 (successful).
+  INFO [96489965] Finished in 0.345 seconds with exit status 0 (successful).
+  INFO [0b57f1d4] Running /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD on 143.198.97.178
+ DEBUG [0b57f1d4] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD )
+  INFO [cc60a0b9] Running /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD as long@143.198.97.178
+ DEBUG [cc60a0b9] Command: ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git ls-remote https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git HEAD )
+ DEBUG [cc60a0b9] 	61b12ed9555f188a733a3e8889b8057137c7581c	HEAD
+  INFO [cc60a0b9] Finished in 0.551 seconds with exit status 0 (successful).
+ DEBUG [0b57f1d4] 	61b12ed9555f188a733a3e8889b8057137c7581c
+ DEBUG [0b57f1d4] 		HEAD
+  INFO [0b57f1d4] Finished in 0.564 seconds with exit status 0 (successful).
+  INFO [f3ddd318] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases as long@143.198.97.178
+ DEBUG [f3ddd318] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases
+  INFO [7014fea7] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases on 143.198.97.178
+ DEBUG [7014fea7] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared /home/long/apps/LongNguyen/releases
+  INFO [7014fea7] Finished in 0.363 seconds with exit status 0 (successful).
+  INFO [f3ddd318] Finished in 0.364 seconds with exit status 0 (successful).
+  INFO [e8e010d7] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets on 143.198.97.178
+ DEBUG [e8e010d7] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets
+  INFO [12e3faf8] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets as long@143.198.97.178
+ DEBUG [12e3faf8] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/tmp/pids /home/long/apps/LongNguyen/shared/tmp/sockets /home/long/apps/LongNguyen/shared/log /home/long/apps/LongNguyen/shared/public/assets
+  INFO [e8e010d7] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [12e3faf8] Finished in 0.319 seconds with exit status 0 (successful).
+  INFO [d751d229] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config on 143.198.97.178
+ DEBUG [d751d229] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config
+  INFO [bf257e56] Running /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config as long@143.198.97.178
+ DEBUG [bf257e56] Command: /usr/bin/env mkdir -p /home/long/apps/LongNguyen/shared/config
+  INFO [bf257e56] Finished in 0.416 seconds with exit status 0 (successful).
+  INFO [d751d229] Finished in 0.417 seconds with exit status 0 (successful).
+ DEBUG [862b6ad6] Running [ -f /home/long/apps/LongNguyen/shared/config/database.yml ] on 143.198.97.178
+ DEBUG [862b6ad6] Command: [ -f /home/long/apps/LongNguyen/shared/config/database.yml ]
+ DEBUG [29e2bf5c] Running [ -f /home/long/apps/LongNguyen/shared/config/database.yml ] as long@143.198.97.178
+ DEBUG [29e2bf5c] Command: [ -f /home/long/apps/LongNguyen/shared/config/database.yml ]
+ DEBUG [862b6ad6] Finished in 0.391 seconds with exit status 0 (successful).
+ DEBUG [5c818c79] Running [ -f /home/long/apps/LongNguyen/shared/config/application.yml ] on 143.198.97.178
+ DEBUG [5c818c79] Command: [ -f /home/long/apps/LongNguyen/shared/config/application.yml ]
+ DEBUG [29e2bf5c] Finished in 0.390 seconds with exit status 0 (successful).
+ DEBUG [cef7c4a6] Running [ -f /home/long/apps/LongNguyen/shared/config/application.yml ] as long@143.198.97.178
+ DEBUG [cef7c4a6] Command: [ -f /home/long/apps/LongNguyen/shared/config/application.yml ]
+ DEBUG [5c818c79] Finished in 0.266 seconds with exit status 0 (successful).
+ DEBUG [cef7c4a6] Finished in 0.265 seconds with exit status 0 (successful).
+ DEBUG [ee3347d7] Running [ -f /home/long/apps/LongNguyen/shared/puma.rb ] on 143.198.97.178
+ DEBUG [ee3347d7] Command: [ -f /home/long/apps/LongNguyen/shared/puma.rb ]
+ DEBUG [48f2feef] Running [ -f /home/long/apps/LongNguyen/shared/puma.rb ] as long@143.198.97.178
+ DEBUG [48f2feef] Command: [ -f /home/long/apps/LongNguyen/shared/puma.rb ]
+ DEBUG [48f2feef] Finished in 0.464 seconds with exit status 0 (successful).
+ DEBUG [ee3347d7] Finished in 0.465 seconds with exit status 0 (successful).
+ DEBUG [abcd8281] Running [ -f /home/long/apps/LongNguyen/current/REVISION ] on 143.198.97.178
+ DEBUG [abcd8281] Command: [ -f /home/long/apps/LongNguyen/current/REVISION ]
+ DEBUG [1b4dec67] Running [ -f /home/long/apps/LongNguyen/current/REVISION ] as long@143.198.97.178
+ DEBUG [1b4dec67] Command: [ -f /home/long/apps/LongNguyen/current/REVISION ]
+ DEBUG [abcd8281] Finished in 0.317 seconds with exit status 0 (successful).
+ DEBUG [36a6a712] Running /usr/bin/env cat /home/long/apps/LongNguyen/current/REVISION 2>/dev/null on 143.198.97.178
+ DEBUG [36a6a712] Command: /usr/bin/env cat /home/long/apps/LongNguyen/current/REVISION 2>/dev/null
+ DEBUG [1b4dec67] Finished in 0.317 seconds with exit status 0 (successful).
+ DEBUG [87a74233] Running /usr/bin/env cat /home/long/apps/LongNguyen/current/REVISION 2>/dev/null as long@143.198.97.178
+ DEBUG [87a74233] Command: /usr/bin/env cat /home/long/apps/LongNguyen/current/REVISION 2>/dev/null
+ DEBUG [87a74233] 	af1f3a289181ae490dc1fdd83466023044f1b361
+ DEBUG [36a6a712] 	af1f3a289181ae490dc1fdd83466023044f1b361
+ DEBUG [87a74233] Finished in 0.311 seconds with exit status 0 (successful).
+ DEBUG [36a6a712] Finished in 0.312 seconds with exit status 0 (successful).
+ DEBUG [1fbc6d6f] Running [ -f /home/long/apps/LongNguyen/repo/HEAD ] on 143.198.97.178
+ DEBUG [1fbc6d6f] Command: [ -f /home/long/apps/LongNguyen/repo/HEAD ]
+ DEBUG [ef21a093] Running [ -f /home/long/apps/LongNguyen/repo/HEAD ] as long@143.198.97.178
+ DEBUG [ef21a093] Command: [ -f /home/long/apps/LongNguyen/repo/HEAD ]
+ DEBUG [1fbc6d6f] Finished in 0.409 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/long/apps/LongNguyen/repo
+ DEBUG [ef21a093] Finished in 0.408 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /home/long/apps/LongNguyen/repo
+ DEBUG [112849f7] Running if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi on 143.198.97.178
+ DEBUG [112849f7] Command: if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi
+ DEBUG [2985b3bf] Running if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi as long@143.198.97.178
+ DEBUG [2985b3bf] Command: if test ! -d /home/long/apps/LongNguyen/repo; then echo "Directory does not exist '/home/long/apps/LongNguyen/repo'" 1>&2; false; fi
+ DEBUG [2985b3bf] Finished in 0.388 seconds with exit status 0 (successful).
+  INFO [9a1730b0] Running /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git as long@143.198.97.178
+ DEBUG [9a1730b0] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git )
+ DEBUG [112849f7] Finished in 0.390 seconds with exit status 0 (successful).
+  INFO [f7d5eb6e] Running /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git on 143.198.97.178
+ DEBUG [f7d5eb6e] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git remote set-url origin https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription.git )
+  INFO [9a1730b0] Finished in 0.276 seconds with exit status 0 (successful).
+  INFO [f5b74459] Running /usr/bin/env git remote update --prune as long@143.198.97.178
+ DEBUG [f5b74459] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git remote update --prune )
+  INFO [f7d5eb6e] Finished in 0.283 seconds with exit status 0 (successful).
+  INFO [aa23506a] Running /usr/bin/env git remote update --prune on 143.198.97.178
+ DEBUG [aa23506a] Command: cd /home/long/apps/LongNguyen/repo && ( export GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-49a201e347f16d367f52.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [f5b74459] 	Fetching origin
+ DEBUG [aa23506a] 	Fetching origin
+ DEBUG [aa23506a] 	remote: Enumerating objects: 17, done.[K
+remote: Counting objects:   5% (1/17)[Kremote: Counting objects:  11% (2/17)[Kremote: Counting objects:  17% (3/17)[Kremote: Counting objects:  23% (4/17)[Kremote: Counting objects:  29% (5/17)[Kremote: Counting objects:  35% (6/17)[Kremote: Counting objects:  41% (7/17)[Kremote: Counting objects:  47% (8/17)[Kremote: Counting objects:  52% (9/17)[Kremote: Counting objects:  58% (10/17)[Kremote: Counting objects:  64% (11/17)[Kremote: Counting objects:  70% (12/17)[Kremote: Counting objects:  76% (13/17)[Kremote: Counting objects:  82% (14/17)[Kremote: Counting objects:  88% (15/17)[Kremote: Counting objects:  94% (16/17)[Kremote: Counting objects: 100% (17/17)[Kremote: Counting objects: 100% (17/17), done.[K
+remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [aa23506a] 	remote: Total 9 (delta 5), reused 9 (delta 5), pack-reused 0[K
+ DEBUG [aa23506a] 	Unpacking objects:  11% (1/9)
+ DEBUG [aa23506a] 	Unpacking objects:  22% (2/9)
+ DEBUG [aa23506a] 	Unpacking objects:  33% (3/9)
+ DEBUG [aa23506a] 	Unpacking objects:  44% (4/9)
+ DEBUG [aa23506a] 	Unpacking objects:  55% (5/9)
+ DEBUG [aa23506a] 	Unpacking objects:  66% (6/9)
+ DEBUG [aa23506a] 	Unpacking objects:  77% (7/9)
+ DEBUG [aa23506a] 	Unpacking objects:  88% (8/9)
+ DEBUG [f5b74459] 	remote: Enumerating objects: 17, done.[K
+remote: Counting objects:   5% (1/17)[Kremote: Counting objects:  11% (2/17)[Kremote: Counting objects:  17% (3/17)[Kremote: Counting objects:  23% (4/17)[Kremote: Counting objects:  29% (5/17)[Kremote: Counting objects:  35% (6/17)[Kremote: Counting objects:  41% (7/17)[Kremote: Counting objects:  47% (8/17)[Kremote: Counting objects:  52% (9/17)[Kremote: Counting objects:  58% (10/17)[Kremote: Counting objects:  64% (11/17)[K
+ DEBUG [f5b74459] 	remote: Counting objects:  70% (12/17)[Kremote: Counting objects:  76% (13/17)[Kremote: Counting objects:  82% (14/17)[Kremote: Counting objects:  88% (15/17)[Kremote: Counting objects:  94% (16/17)[Kremote: Counting objects: 100% (17/17)[Kremote: Counting objects: 100% (17/17), done.[K
+remote: Compressing objects:  50% (1/2)[Kremote: Compressing objects: 100% (2/2)[Kremote: Compressing objects: 100% (2/2), done.[K
+ DEBUG [f5b74459] 	Unpacking objects:  11% (1/9)Unpacking objects:  22% (2/9)Unpacking objects:  33% (3/9)Unpacking objects:  44% (4/9)
+ DEBUG [f5b74459] 	remote: Total 9 (delta 5), reused 9 (delta 5), pack-reused 0[K
+ DEBUG [f5b74459] 	Unpacking objects:  55% (5/9)
+ DEBUG [f5b74459] 	Unpacking objects:  66% (6/9)Unpacking objects:  77% (7/9)Unpacking objects:  88% (8/9)Unpacking objects: 100% (9/9)
+ DEBUG [f5b74459] 	Unpacking objects: 100% (9/9), 4.16 KiB | 426.00 KiB/s, done.
+ DEBUG [f5b74459] 	error: cannot lock ref 'refs/heads/master': is at 61b12ed9555f188a733a3e8889b8057137c7581c but expected af1f3a289181ae490dc1fdd83466023044f1b361
+From https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription
+ ! af1f3a2..61b12ed  master     -> master  (unable to update local ref)
+ DEBUG [f5b74459] 	error: Could not fetch origin
+ DEBUG [aa23506a] 	Unpacking objects: 100% (9/9)
+ DEBUG [aa23506a] 	Unpacking objects: 100% (9/9), 4.16 KiB | 236.00 KiB/s, done.
+ DEBUG [aa23506a] 	
+ DEBUG [aa23506a] 	From https://github.com/longviddd/Rocket_Elevator_Machine_Learning_Transcription
+   af1f3a2..61b12ed  master     -> master
+  INFO [aa23506a] Finished in 0.854 seconds with exit status 0 (successful).
